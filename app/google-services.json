@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "354949527637",
+    "firebase_url": "https://hack-65138-default-rtdb.firebaseio.com",
+    "project_id": "hack-65138",
+    "storage_bucket": "hack-65138.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354949527637:android:aad3d9e185fd9534f9fcdc",
+        "android_client_info": {
+          "package_name": "project.snapmark"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd_iqkjOfwrhBu01Lf13SPRnD_X3w4NBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
