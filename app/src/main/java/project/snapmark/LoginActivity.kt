@@ -93,6 +93,7 @@ class LoginActivity : AppCompatActivity() {
         when (role) {
             "Admin" -> startActivity(Intent(this, AdminDashboardActivity::class.java))
             "Teacher" -> startActivity(Intent(this, TeacherDashboardActivity::class.java))
+            "Classroom" -> startActivity(Intent(this, ClassroomDashboardActivity::class.java))
         }
         finish()
     }

@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        val roles = arrayOf("Teacher", "Admin")
+        val roles = arrayOf("Teacher", "Admin", "Classroom")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, roles)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerRole.adapter = adapter
@@ -57,7 +57,7 @@ class RegisterActivity : AppCompatActivity() {
                         "name" to name,
                         "email" to email,
                         "role" to role,
-                        "approved" to (role != "Admin")
+                        "approved" to (role != "Admin") // Admin needs approval
                     )
 
                     // If Teacher, assign a unique teacher ID
@@ -70,10 +70,11 @@ class RegisterActivity : AppCompatActivity() {
                     db.collection("users").document(uid)
                         .set(userMap)
                         .addOnSuccessListener {
-                            val msg = if (role == "Teacher") {
-                                "Registered Successfully! Your Teacher ID: ${userMap["teacherId"]}"
-                            } else {
-                                "Registration Successful! Wait for Admin approval."
+                            val msg = when (role) {
+                                "Teacher" -> "Registered Successfully! Your Teacher ID: ${userMap["teacherId"]}"
+                                "Admin" -> "Registration Successful! Wait for Super Admin approval."
+                                "Classroom" -> "Classroom account created successfully!"
+                                else -> "Registration Successful!"
                             }
                             Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
 

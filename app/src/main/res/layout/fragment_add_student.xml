@@ -1,29 +1,47 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:padding="16dp"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/etStudentName"
-        android:hint="Student Name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etRollNo"
-        android:hint="Roll Number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Student Name -->
+        <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Student Name"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
 
-    <EditText
-        android:id="@+id/etClass"
-        android:hint="Class"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Student Class -->
+        <EditText
+            android:id="@+id/etStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Class"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"/>
 
-    <Button
-        android:id="@+id/btnAddStudent"
-        android:text="Add Student"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        <!-- Add Student Button -->
+        <Button
+            android:id="@+id/btnAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Student"/>
+
+        <!-- QR Code Display -->
+        <ImageView
+            android:id="@+id/imgQrCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

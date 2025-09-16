@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Snapmark">
         <activity
+            android:name=".FaceCaptureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClassroomDashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddStudentFragment"
             android:exported="false" />
         <activity
