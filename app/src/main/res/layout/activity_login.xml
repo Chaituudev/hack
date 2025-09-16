@@ -1,68 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="24dp"
-    android:background="@color/white">
-
-    <TextView
-        android:id="@+id/loginTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp"/>
+    android:gravity="center">
 
     <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="0dp"
+        android:id="@+id/etEmailLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
-        android:inputType="text"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:background="@drawable/edittext_bg"
-        app:layout_constraintTop_toBottomOf="@id/loginTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="0dp"
+        android:id="@+id/etPasswordLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="12dp"
-        android:background="@drawable/edittext_bg"
-        app:layout_constraintTop_toBottomOf="@id/etUsername"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
-        android:id="@+id/btnLoginStudent"
-        android:layout_width="0dp"
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login as Student"
-        app:layout_constraintTop_toBottomOf="@id/etPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:text="Login"
+        android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/btnLoginAdmin"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/tvRegisterRedirect"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login as Admin"
-        app:layout_constraintTop_toBottomOf="@id/btnLoginStudent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Don't have an account? Register"
+        android:textColor="@android:color/holo_blue_dark"/>
+</LinearLayout>

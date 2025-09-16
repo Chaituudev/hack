@@ -1,40 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#FFFFFF">
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp"
         android:gravity="center_horizontal">
 
-        <!-- Title -->
-        <TextView
-            android:id="@+id/tvRegisterTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Name -->
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name"
-            android:inputType="textPersonName"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Email -->
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
@@ -42,10 +24,8 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Password -->
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
@@ -53,36 +33,26 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="12dp"
-            android:background="@android:drawable/edit_text"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="12dp"/>
 
-        <!-- Role Spinner -->
         <Spinner
             android:id="@+id/spinnerRole"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="16dp"/>
 
-        <!-- Register Button -->
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:textAllCaps="false"
-            android:backgroundTint="#3F51B5"
-            android:textColor="#FFFFFF"
-            android:padding="12dp" />
+            android:layout_marginBottom="16dp"/>
 
-        <!-- Already have account -->
         <TextView
             android:id="@+id/tvLoginRedirect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account? Login"
-            android:textSize="14sp"
-            android:textColor="#3F51B5"
-            android:layout_marginTop="16dp" />
-
+            android:textColor="@android:color/holo_blue_dark"/>
     </LinearLayout>
 </ScrollView>

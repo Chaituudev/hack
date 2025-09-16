@@ -7,7 +7,6 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import project.snapmark.AdminDashboardActivity
 import project.snapmark.R
-import project.snapmark.StudentDashboardActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -27,8 +26,8 @@ class SplashActivity : AppCompatActivity() {
 
         if (isLoggedIn && role != null) {
             when (role) {
-                "student" -> {
-                    startActivity(Intent(this, StudentDashboardActivity::class.java))
+                "Teacher" -> {
+                    startActivity(Intent(this, TeacherDashboardActivity::class.java))
                 }
                 "admin" -> {
                     startActivity(Intent(this, AdminDashboardActivity::class.java))
